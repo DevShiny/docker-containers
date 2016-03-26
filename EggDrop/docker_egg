@@ -1,0 +1,1 @@
+docker run -d --name=EggDrop -p 3333:3333/tcp -v /home/docker/egg/uutf/config:/config:rw -v /home/docker/egg/uutf/logs:/logs:rw -t devshiny/eggdrop:2014.11.24

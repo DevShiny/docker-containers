@@ -36,22 +36,25 @@ apt-get install -qy tcl
 blddir=`mktemp -d` && cd $blddir
 
 # fetch eggdrop source
-curl -o eggdrop-develop.tar.gz ftp://ftp.eggheads.org/pub/eggdrop/source/snapshot/eggdrop-develop.tar.gz 
-tar -xf eggdrop-develop.tar.gz
+curl -o eggdrop1.6.21.tar.bz2 ftp://ftp.eggheads.org/pub/eggdrop/source/1.6/eggdrop1.6.21.tar.bz2
+tar -xjf eggdrop1.6.21.tar.bz2
+#curl -L -o eggdrop-develop.tar.gz ftp://ftp.eggheads.org/pub/eggdrop/source/snapshot/eggdrop-develop.tar.gz 
+#tar -xf eggdrop-develop.tar.gz
 
 # fetch additional module sources
-cd eggdrop-develop
+cd eggdrop1.6.21
+#cd eggdrop-develop
 
 cd src/mod
-curl -o dccidlekick.mod.1.0.1.tar.gz http://www.egghelp.org/files/modules/dccidlekick.mod.1.0.1.tar.gz
+curl -L -o dccidlekick.mod.1.0.1.tar.gz http://www.egghelp.org/files/modules/dccidlekick.mod.1.0.1.tar.gz
 tar xf dccidlekick.mod.1.0.1.tar.gz
-curl -o joinflood.mod.1.0.1.tar.gz http://www.egghelp.org/files/modules/joinflood.mod.1.0.1.tar.gz
+curl -L -o joinflood.mod.1.0.1.tar.gz http://www.egghelp.org/files/modules/joinflood.mod.1.0.1.tar.gz
 tar xf joinflood.mod.1.0.1.tar.gz
-curl -o kickflood.mod.1.0.1.tar.gz http://www.egghelp.org/files/modules/kickflood.mod.1.0.1.tar.gz
+curl -L -o kickflood.mod.1.0.1.tar.gz http://www.egghelp.org/files/modules/kickflood.mod.1.0.1.tar.gz
 tar xf kickflood.mod.1.0.1.tar.gz
-curl -o noclones.mod.1.0.1.tar.gz http://www.egghelp.org/files/modules/noclones.mod.1.0.1.tar.gz
+curl -L -o noclones.mod.1.0.1.tar.gz http://www.egghelp.org/files/modules/noclones.mod.1.0.1.tar.gz
 tar xf noclones.mod.1.0.1.tar.gz
-curl -o norepeat.mod.1.0.1.tar.gz http://www.egghelp.org/files/modules/norepeat.mod.1.0.1.tar.gz
+curl -L -o norepeat.mod.1.0.1.tar.gz http://www.egghelp.org/files/modules/norepeat.mod.1.0.1.tar.gz
 tar xf norepeat.mod.1.0.1.tar.gz
 cd ../..
 

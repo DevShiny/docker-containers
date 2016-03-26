@@ -14,3 +14,5 @@ then
 else
 	exec /sbin/setuser nobody /opt/eggdrop/eggdrop -n /config/eggdrop.conf
 fi
+
+rm /logs/eggdrop.pid
